@@ -1,6 +1,7 @@
 package br.com.codenation;
 
 import br.com.codenation.models.Carro;
+import br.com.codenation.models.Marca;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.ApplicationContext;
@@ -17,6 +18,7 @@ public class Aplicacao {
 
         carro.setModelo("Focus");
         carro.setAno(2018);
+        carro.getMarca().setNome("Ford");
         System.out.println(carro);
     }
 }

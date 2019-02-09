@@ -1,5 +1,6 @@
 package br.com.codenation.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -7,6 +8,9 @@ public class Carro {
 
     private String modelo;
     private int ano;
+
+    @Autowired
+    private Marca marca;
 
     public Carro() {
         System.out.println("Construtor de Carro executado");
@@ -28,11 +32,21 @@ public class Carro {
         this.ano = ano;
     }
 
+    public Marca getMarca() {
+        return marca;
+    }
+
+    public void setMarca(Marca marca) {
+        this.marca = marca;
+    }
+
+
     @Override
     public String toString() {
         return "Carro{" +
                 "modelo='" + modelo + '\'' +
                 ", ano=" + ano +
+                ", marca=" + marca +
                 '}';
     }
 }
